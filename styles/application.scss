@@ -73,6 +73,12 @@ section {
       @include span-columns(4);
     }
   }
+
+  i {
+    display: inline-block;
+    transform: rotate(-10deg);
+    font-size: 1.5rem;
+  }
 }
 
 #clients, #photos {
