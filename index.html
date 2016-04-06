@@ -8,6 +8,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/application.css" />
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="/libs/jquery.mThumbnailScroller.min.js"></script>
+    <link rel="stylesheet" href="/libs/jquery.mThumbnailScroller.css" />
+    <link rel="stylesheet" href="/libs/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+    <script type="text/javascript" src="/libs/jquery.fancybox.pack.js?v=2.1.5"></script>
 </head>
 
 <body>
@@ -109,12 +113,14 @@
   </section>
 </div>
 
-<section id="photos" class="flex flex-center">
-  <img src="images/photos/DSC_1403.jpg" />
-  <img src="images/photos/DSC_0712.jpg" />
-  <img src="images/photos/DSC_0189.jpg" />
-  <img src="images/photos/cat.jpg" />
-  <img src="images/photos/DSC_0261.jpg" />
+<section id="photos">
+  <ul>
+    <li><a class="fancybox" rel="group" href="images/photos/DSC_1403.jpg"><img src="images/photos/DSC_1403.jpg" /></a></li>
+    <li><a class="fancybox" rel="group" href="images/photos/DSC_0712.jpg"><img src="images/photos/DSC_0712.jpg" /></a></li>
+    <li><a class="fancybox" rel="group" href="images/photos/DSC_0189.jpg"><img src="images/photos/DSC_0189.jpg" /></a></li>
+    <li><a class="fancybox" rel="group" href="images/photos/cat.jpg"><img src="images/photos/cat.jpg" /></a></li>
+    <li><a class="fancybox" rel="group" href="images/photos/DSC_0261.jpg"><img src="images/photos/DSC_0261.jpg" /></a></li>
+  </ul>
 </section>
 
 <div class="content-panel">
@@ -154,7 +160,11 @@
 
 <script>
 $(document).ready(function() {
-});
+  $("#photos ul").mThumbnailScroller({
+    axis: "x"
+  });
+  $(".fancybox").fancybox();
+})
 </script>
 </body>
 
