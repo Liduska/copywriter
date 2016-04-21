@@ -5,7 +5,7 @@
   $medium-screen: em(640) !default;
   $large-screen: em(860) !default;
   $footer-background: $panel-color;
-  $footer-color: $action-color;
+  $footer-color: $medium-gray;
   $footer-link-color: transparentize($footer-color, 0.6);
   $footer-disclaimer-color: transparentize($footer-color, 0.6);
 
@@ -14,6 +14,8 @@
   padding: $base-spacing;
   width: 100%;
   display: inline-block;
+  
+  font-size: 0.8em;
 
   .footer-content {
     @include outer-container;
@@ -71,10 +73,6 @@
       float: right;
     }
 
-    li {
-      font-size: 0.8em;
-    }
-
     ul.footer-social {
       margin: 1em 0 0 0;
 
@@ -84,7 +82,6 @@
       }
 
       li {
-        font-size: 1em;
         float: left;
         line-height: 0;
         margin: 0;
