@@ -134,6 +134,18 @@ section {
     @include media($large-screen) {
       @include span-columns(5);
     }
+    
+    
+    a {
+      color: $base-font-color;
+      @include transition(all 0.3s ease-in-out);
+      
+      &:active,
+      &:focus,
+      &:hover {
+        opacity: 0.6;
+      }
+    }
   }
   
   .about {    
