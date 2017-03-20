@@ -40,10 +40,6 @@ section {
     @include flex-direction(row);
     @include justify-content(flex-start);
   }
-
-  > div {
-    @include pad();
-  }
 }
 
 .flex-space-between {
@@ -56,6 +52,14 @@ section {
 
 .flex-wrap {
   @include flex-wrap(wrap);
+}
+
+.flex-items-pad-1 > div {
+  @include pad();
+}
+
+.flex-items-marg-1 > * {
+  margin: auto 1rem;
 }
 
 .content-panel {
@@ -71,7 +75,7 @@ section {
     position: absolute;
   }
   display: block;
-  width: 55rem;
+  width: 50rem;
   bottom: 0;
   margin-bottom: -0.55rem;
 }
@@ -94,7 +98,7 @@ section {
     h2 {
       @include font-size(3.5, $heading-line-height);
       @include margin-bottom(1, $heading-line-height);
-      
+
       span {
         color: $red;
       }
@@ -108,7 +112,7 @@ section {
       @include span-columns(6);
     }
     @include media($x-large-screen) {
-      margin: 10rem auto;
+      margin: 12rem auto 5rem auto;
     }
   }
 }
@@ -129,17 +133,17 @@ section {
 }
 
 #contact {
-  
-  .contacts {    
+
+  .contacts {
     @include media($large-screen) {
       @include span-columns(5);
     }
-    
-    
+
+
     a {
       color: $base-font-color;
       @include transition(all 0.3s ease-in-out);
-      
+
       &:active,
       &:focus,
       &:hover {
@@ -147,8 +151,8 @@ section {
       }
     }
   }
-  
-  .about {    
+
+  .about {
     @include media($large-screen) {
       @include span-columns(7);
     }
