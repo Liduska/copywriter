@@ -8,6 +8,8 @@
 
 @import "footer";
 
+@import "fontello";
+
 body, html {
   height: 100%;
 }
@@ -69,9 +71,9 @@ section {
 .panels {
   text-align: center;
   li {
-    width: 18rem;
+    width: 16rem;
     display: block;
-    @include pad();
+    @include pad(0.50rem);
     margin: 1rem;
     border: 3px solid #fff;
   }
@@ -86,9 +88,10 @@ section {
     position: absolute;
   }
   display: block;
-  width: 50rem;
-  bottom: 0;
-  margin-bottom: -0.55rem;
+  width: 45rem;
+  top: 0;
+  margin-bottom: 0.60rem;
+  right: 0;
 }
 
 #heading {
@@ -116,16 +119,13 @@ section {
     }
   }
 
-  .jumbo {
-    margin: 5rem auto;
-    @include font-size(2, $heading-line-height);
-    @include media($large-screen) {
-      @include span-columns(6);
-    }
-    @include media($x-large-screen) {
-      margin: 12rem auto 5rem auto;
-    }
-  }
+}
+
+.jumbo {
+  text-align: center;
+  font-family: $heading-font-family;
+  @include font-size(2, $heading-line-height);
+  @include pad();
 }
 
 #clients, #photos {
@@ -164,6 +164,9 @@ section {
 #contact {
 
   .contacts {
+    p {
+      margin: 1rem;
+    }
     a {
       color: $base-font-color;
       @include transition(all 0.3s ease-in-out);
@@ -173,12 +176,6 @@ section {
       &:hover {
         opacity: 0.6;
       }
-    }
-  }
-
-  .about {
-    @include media($large-screen) {
-      @include span-columns(7);
     }
   }
 
