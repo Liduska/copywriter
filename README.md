@@ -6,6 +6,7 @@
 
 ### Server
 `python -m SimpleHTTPServer`
+`ruby -run -ehttpd . -p8000
 
 ### Publishing
 `rake site:publish`
