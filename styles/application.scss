@@ -66,6 +66,17 @@ section {
   background-color: $panel-color;
 }
 
+.panels {
+  text-align: center;
+  li {
+    width: 18rem;
+    display: block;
+    @include pad();
+    margin: 1rem;
+    border: 3px solid #fff;
+  }
+}
+
 #heading-container {
   position: relative;
 }
@@ -121,6 +132,24 @@ section {
 
   img {
     margin: 1rem 2rem;
+  }
+}
+
+#clients {
+  text-align: center;
+
+  .row {
+    @include media($large-screen) {
+      @include row();
+    }
+  }
+
+  .col {
+    @include pad();
+
+    @include media($large-screen) {
+      @include span-columns(4);
+    }
   }
 }
 
