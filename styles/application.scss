@@ -27,6 +27,10 @@ h1, h2 {
   @include font-size(2, $heading-line-height);
 }
 
+.yellow {
+  color: $yellow;
+}
+
 section {
   @include outer-container;
   @include pad();
@@ -66,6 +70,10 @@ section {
 
 .content-panel {
   background-color: $panel-color;
+
+  h2 {
+    color: #fff;
+  }
 }
 
 .panels {
@@ -75,7 +83,7 @@ section {
     display: block;
     @include pad(0.50rem);
     margin: 1rem;
-    border: 3px solid #fff;
+    border: 2.5px solid #FCE054;
   }
 }
 
@@ -89,8 +97,8 @@ section {
   }
   display: block;
   width: 45rem;
-  top: 0;
-  margin-bottom: 0.60rem;
+  bottom: -26px;
+  margin-bottom: 0.50rem;
   right: 0;
 }
 
@@ -114,7 +122,7 @@ section {
       @include margin-bottom(1, $heading-line-height);
 
       span {
-        color: $red;
+        color: $yellow;
       }
     }
   }
@@ -125,13 +133,10 @@ section {
   text-align: center;
   font-family: $heading-font-family;
   @include font-size(2, $heading-line-height);
-  @include pad();
-}
+  @include pad(0.5rem);
 
-#clients, #photos {
-
-  img {
-    margin: 1rem 2rem;
+  p {
+    margin-bottom: 0;
   }
 }
 
@@ -151,17 +156,15 @@ section {
       @include span-columns(4);
     }
   }
-}
 
-#clients img {
-  max-height: 5rem;
-}
-
-#photos img {
-  max-height: 8rem;
+  img {
+    margin: 1rem 2rem;
+    max-height: 5rem;
+  }
 }
 
 #contact {
+  padding-bottom: 0.2rem;
 
   .contacts {
     p {
@@ -182,6 +185,10 @@ section {
   img {
     margin-right: 1rem;
   }
+}
+
+#mail {
+  padding-top: 0;
 }
 
 .hire-me {
