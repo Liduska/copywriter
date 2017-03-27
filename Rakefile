@@ -5,6 +5,10 @@ GITHUB_REPONAME = "Liduska/liduska.github.io"
 
 namespace :site do
 
+  task :watch do
+    system "sass --watch styles/application.scss:styles/application.css"
+  end
+
   desc "Generate and publish"
   task :publish do
     Dir.mktmpdir do |tmp|
