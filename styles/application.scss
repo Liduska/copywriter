@@ -70,6 +70,7 @@ section {
 
 .content-panel {
   background-color: $panel-color;
+  color: #fff;
 
   h2 {
     color: #fff;
@@ -149,6 +150,10 @@ section {
       @include row();
     }
   }
+
+  .client-icon {
+    width: 45px;
+    }
 
   .col {
     @include pad();
