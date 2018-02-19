@@ -214,3 +214,18 @@ section {
     color: $base-font-color;
   }
 }
+
+.pricelist-link {
+  width: 16rem;
+  display: block;
+  line-height: 1.2;
+  @include pad(0.50rem);
+  margin: 1rem;
+  border: 2.5px solid #C92929;
+  transition: all 0.3s ease-out;
+
+  &:hover {
+    color: #fff;
+    background-color: #C92929;
+  }
+}
