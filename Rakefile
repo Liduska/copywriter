@@ -12,7 +12,7 @@ namespace :site do
   desc "Generate and publish"
   task :publish do
     Dir.mktmpdir do |tmp|
-      cp_r ["images", "styles", "CNAME", "index.html"], tmp
+      cp_r ["images", "styles", "resources", "CNAME", "index.html"], tmp
 
       Dir.chdir tmp
       system "git init"
